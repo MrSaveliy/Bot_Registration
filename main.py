@@ -126,7 +126,7 @@ async def begin_message_handler(message: types.Message, state: FSMContext):
     chat_id = message.chat.id
     user_status = add_user(message)
     if user_status == False:
-        message = f"Ваша уже заполнена. Нажмите кнопку посмотреть анкету" 
+        message = f"Ваша анкета уже заполнена. Нажмите кнопку посмотреть анкету" 
         await bot.send_message(chat_id, message)
     else:   
         message = f"Давай начнем регистрацию \n" \
